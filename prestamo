@@ -1,0 +1,38 @@
+Algoritmo prestamo ()
+	Inicio
+		Definir monto_prestamo, tasa, num_tic, porcentaje, monto_total, valor_abono, rest Como Real
+		Escribir "Ingrese el monto del préstamo"
+		Leer monto_prestamo
+		Escribir "Ingrese la tasa trimestral"
+		Leer tasa
+		Escribir "Ingrese el número de trimestres"
+		Leer num_tir
+		Escribir "Ingrese el porcentaje de abono"
+		Leer porcentaje
+		
+		monto_total <- monto_prestamo * (1 + tasa) ^ num_tir
+		valor_abono <- monto_total * (porcentaje / 100)
+		rest <- monto_total - valor_abono
+		
+		Escribir "El valor del monto es de: ", monto_total
+		Escribir "El valor del abono es de: ", valor_abono
+		Escribir "El monto final a pagar es de: ", rest
+	Fin Algoritmo
+
+
+  - Ingrese el monto del préstamo
+  1000
+- Ingrese la tasa trimestral
+  1.5
+- Ingrese el número de trimestres
+  2
+- Ingrese el porcentaje del abono
+  20
+
+- monto_total = 1000 x (1 + 1.5)^2 = 6250
+- valor_abono = 6250 x (20 / 100) = 1250
+- rest = 6250 - 1250 = 5000
+
+- El valor del monto es de: 6250
+- El valor del abono es de: 1250
+- El monto final a pagar es de: 5000
